@@ -1,3 +1,22 @@
-<h1>
-  {{title}}
-</h1>
+<md-sidenav-layout fullscreen>
+  <md-sidenav #sidenav mode="over">
+    <h2>PIZZA UND ROMME</h2>
+    <br>
+    <a md-button (click)="sidenav.close()">Runde</a>
+    <br>
+    <a md-button (click)="sidenav.close()">Registrieren</a>
+    <br>
+  </md-sidenav>
+  <md-toolbar>
+    <button md-icon-button (click)="sidenav.toggle()">
+      <md-icon>menu</md-icon>
+    </button>
+    <span>Pizza & Rommé</span>
+  </md-toolbar>
+
+  <div class="container">
+    <div class="content">
+      TEst
+    </div>
+  </div>
+</md-sidenav-layout>

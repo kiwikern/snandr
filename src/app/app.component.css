@@ -1,0 +1,14 @@
+md-sidenav {
+  text-align: center;
+  padding: 24px;
+}
+
+.content {
+  display: inline-block;
+  text-align: left;
+}
+
+.container {
+  padding: 24px;
+  text-align: center;
+}
