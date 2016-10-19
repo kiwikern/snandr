@@ -6,11 +6,13 @@ import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { AppRoutingComponent } from './app-routing/app-routing.component';
+import { TournamentBrowserRoutingComponent } from './tournament-browser-routing/tournament-browser-routing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppRoutingComponent
+    AppRoutingComponent,
+    TournamentBrowserRoutingComponent
   ],
   imports: [
     BrowserModule,
