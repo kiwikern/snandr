@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Match } from '../match';
 
 @Component({
-  selector: 'app-match-browser',
+  selector: 'snandr-match-browser',
   templateUrl: './match-browser.component.html',
   styleUrls: ['./match-browser.component.css']
 })

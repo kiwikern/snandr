@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-match-edit',
+  selector: 'snandr-match-edit',
   templateUrl: './match-edit.component.html',
   styleUrls: ['./match-edit.component.css']
 })
