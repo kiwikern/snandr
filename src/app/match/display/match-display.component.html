@@ -1,0 +1,9 @@
+<md-card (click)="openMatch()">
+  <md-card-title>{{match.name}}</md-card-title>
+  <md-card-content>
+    <div>
+      <img md-card-avatar [src]=""> Punkte:
+    </div>
+    Mitspieler: <span *ngFor="let player of match.player">{{player}} </span>
+  </md-card-content>
+</md-card>

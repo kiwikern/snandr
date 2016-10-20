@@ -6,7 +6,9 @@ export class MatchService {
   private matches: Match[];
 
   constructor() {
-    this.matches = [];
+    let initialMatch: Match = new Match('Initial', null, null, 5, []);
+    initialMatch.id = 34;
+    this.matches = [initialMatch];
   }
 
   getMatches(): Match[] {

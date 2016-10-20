@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 
 import { MatchBrowserComponent } from './browser/match-browser.component';
 import { MatchEditComponent } from './edit/match-edit.component';
+import { MatchDisplayComponent } from './display/match-display.component';
 
 import { MatchService } from './match.service';
 
@@ -18,7 +19,8 @@ import { MatchService } from './match.service';
   ],
   declarations: [
     MatchBrowserComponent,
-    MatchEditComponent
+    MatchEditComponent,
+    MatchDisplayComponent
   ],
   providers: [
     MatchService
