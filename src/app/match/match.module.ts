@@ -4,6 +4,7 @@ import { MatchRoutingModule } from './match-routing.module';
 import { MaterialModule } from '@angular/material';
 
 import { MatchBrowserComponent } from './browser/match-browser.component';
+import { MatchEditComponent } from './edit/match-edit.component';
 
 @NgModule({
   imports: [
@@ -11,6 +12,9 @@ import { MatchBrowserComponent } from './browser/match-browser.component';
     MatchRoutingModule,
     MaterialModule.forRoot(),
   ],
-  declarations: [MatchBrowserComponent]
+  declarations: [
+    MatchBrowserComponent,
+    MatchEditComponent
+  ]
 })
 export class MatchModule { }
