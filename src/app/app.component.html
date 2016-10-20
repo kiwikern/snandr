@@ -2,7 +2,7 @@
   <md-sidenav #sidenav mode="over">
     <h2>PIZZA UND ROMME</h2>
     <br>
-    <a md-button (click)="sidenav.close()">Runde</a>
+    <a md-button (click)="sidenav.close()" routerLink="tournament-browser" routerLinkActive="active">Runde</a>
     <br>
     <a md-button (click)="sidenav.close()">Registrieren</a>
     <br>
@@ -16,7 +16,7 @@
 
   <div class="container">
     <div class="content">
-      TEst
+      <router-outlet></router-outlet>
     </div>
   </div>
 </md-sidenav-layout>

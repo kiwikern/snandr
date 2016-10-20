@@ -3,22 +3,22 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
+import { AppRoutingModule } from './app-routing.module';
+import { TournamentBrowserModule } from './tournament-browser/tournament-browser.module';
 
 import { AppComponent } from './app.component';
-import { AppRoutingComponent } from './app-routing/app-routing.component';
-import { TournamentBrowserRoutingComponent } from './tournament-browser-routing/tournament-browser-routing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppRoutingComponent,
-    TournamentBrowserRoutingComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
+    AppRoutingModule,
+    TournamentBrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
