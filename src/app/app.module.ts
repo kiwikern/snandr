@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
-import { MatchBrowserModule } from './match/browser/match-browser.module';
+import { MatchModule } from './match/match.module';
 
 import { AppComponent } from './app.component';
 
@@ -18,7 +18,7 @@ import { AppComponent } from './app.component';
     HttpModule,
     MaterialModule.forRoot(),
     AppRoutingModule,
-    MatchBrowserModule
+    MatchModule
   ],
   providers: [],
   bootstrap: [AppComponent]
