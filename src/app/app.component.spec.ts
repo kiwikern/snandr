@@ -1,5 +1,6 @@
 /* tslint:disable:no-unused-variable */
 
+import { } from 'jasmine';
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
@@ -28,6 +29,6 @@ describe('App: Client', () => {
     let fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     let compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('app works!');
+    expect(compiled.querySelector('span').textContent).toContain('Pizza');
   }));
 });
