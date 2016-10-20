@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'tournament-browser', pathMatch: 'full' }
+  { path: '', redirectTo: 'match-browser', pathMatch: 'full' }
 ];
 
 @NgModule({
