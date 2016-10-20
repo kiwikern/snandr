@@ -1,6 +1,7 @@
 <md-grid-list cols="2" gutterSize="4px" style="max-width: 600px; display: table-row-group">
   <md-grid-tile *ngFor="let match of matches" [style.background]="'transparent'">
     <!-- <match-display [match]="match"></match-display> -->
+    <span>{{ match.name }}</span>
   </md-grid-tile>
 </md-grid-list>
 <button md-fab class="btn-floating" md-tooltip="Füge ein neues Match hinzu." i18n-md-tooltip tooltip-position="below" routerLink="edit">

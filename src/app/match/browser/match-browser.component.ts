@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Match } from '../match';
+import { MatchService } from '../match.service';
 
 @Component({
   selector: 'snandr-match-browser',
@@ -10,7 +11,9 @@ export class MatchBrowserComponent implements OnInit {
 
   public matches: Match[];
 
-  constructor() { }
+  constructor(private service: MatchService) {
+    this.matches = service.getMatches();
+  }
 
   ngOnInit() {
   }
