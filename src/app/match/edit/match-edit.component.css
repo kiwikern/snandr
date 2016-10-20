@@ -1,0 +1,8 @@
+.toolbar-card {
+  padding: 0;
+  margin: 16px;
+}
+
+.toolbar-card md-card-content {
+  padding: 16px;
+}

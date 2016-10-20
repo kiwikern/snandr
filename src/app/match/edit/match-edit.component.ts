@@ -1,3 +1,4 @@
+import {Match} from '../match';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./match-edit.component.css']
 })
 export class MatchEditComponent implements OnInit {
+  public match: Match;
 
-  constructor() { }
+  constructor() {
+    if (this.match == null) {
+      let today: Date = new Date();
+      this.match = new Match('', today, today, 5, []);
+    }
+  }
 
   ngOnInit() {
+  }
+
+  onSubmit() {
+
   }
 
 }
