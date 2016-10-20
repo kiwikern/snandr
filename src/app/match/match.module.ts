@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { MatchBrowserComponent } from './browser/match-browser.component';
 import { MatchEditComponent } from './edit/match-edit.component';
 
+import { MatchService } from './match.service';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -17,6 +19,9 @@ import { MatchEditComponent } from './edit/match-edit.component';
   declarations: [
     MatchBrowserComponent,
     MatchEditComponent
+  ],
+  providers: [
+    MatchService
   ]
 })
 export class MatchModule { }
