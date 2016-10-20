@@ -3,11 +3,11 @@ import { Match } from '../match';
 import { MatchService } from '../match.service';
 
 @Component({
-  selector: 'snandr-match-browser',
-  templateUrl: './match-browser.component.html',
-  styleUrls: ['./match-browser.component.css']
+  selector: 'snandr-match-list',
+  templateUrl: './match-list.component.html',
+  styleUrls: ['./match-list.component.css']
 })
-export class MatchBrowserComponent implements OnInit {
+export class MatchListComponent implements OnInit {
 
   public matches: Match[];
 

@@ -1,11 +1,11 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
-import { MatchBrowserComponent } from './match-browser.component';
+import { MatchListComponent } from './match-list.component';
 
-describe('Component: MatchBrowser', () => {
+describe('Component: MatchList', () => {
   it('should create an instance', () => {
-    let component = new MatchBrowserComponent();
+    let component = new MatchListComponent(null);
     expect(component).toBeTruthy();
   });
 });
