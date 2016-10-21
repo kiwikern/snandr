@@ -9,7 +9,7 @@ import { Match } from '../match';
 export class MatchDisplayComponent implements OnInit {
 
   @Input()
-  private match: Match;
+  public match: Match;
   constructor() { }
 
   ngOnInit() {
