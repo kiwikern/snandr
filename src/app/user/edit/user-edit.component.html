@@ -1,3 +1,20 @@
-<p>
-  user-edit works!
-</p>
+<form (ngSubmit)="onSubmit()">
+  <md-card>
+    <md-card-title>Person bearbeiten</md-card-title>
+    <md-card-content>
+      <md-input placeholder="Vorname" [(ngModel)]="user.firstName" name="firstName"></md-input>
+      <md-input placeholder="Nachname" [(ngModel)]="user.lastName" name="lastName"></md-input>
+      <br>
+      <md-input placeholder="Username" [(ngModel)]="user.username" name="username"></md-input>
+      <md-input placeholder="E-Mail" [(ngModel)]="user.email" name="email"></md-input>
+      <br>
+      <md-input placeholder="Stadt" [(ngModel)]="user.city" name="city"></md-input>
+    </md-card-content>
+  </md-card>
+  <button md-fab type="submit">
+    <md-icon>save</md-icon>
+  </button>
+  <button md-mini-fab (click)="onCancel()" type="reset">
+    <md-icon>cancel</md-icon>
+  </button>
+</form>

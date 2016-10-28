@@ -1,0 +1,5 @@
+<snandr-user-display [user]="user" *ngIf="!isEditMode"></snandr-user-display>
+<snandr-user-edit [user]="user" (saveEvent)="onSave($event)" *ngIf="isEditMode"></snandr-user-edit>
+<button md-fab *ngIf="isEditable()" (click)="startEdit()" class="btn-floating">
+  <md-icon>edit</md-icon>
+</button>

@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { MatchModule } from './match/match.module';
 
 import { AppComponent } from './app.component';
+import {UserModule} from './user/user.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AppComponent } from './app.component';
     HttpModule,
     MaterialModule.forRoot(),
     AppRoutingModule,
-    MatchModule
+    MatchModule,
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,7 +14,7 @@ import { MatchService } from './match.service';
   imports: [
     CommonModule,
     MatchRoutingModule,
-    MaterialModule.forRoot(),
+    MaterialModule,
     FormsModule
   ],
   declarations: [
