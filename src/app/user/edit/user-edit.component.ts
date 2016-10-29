@@ -13,6 +13,7 @@ export class UserEditComponent {
   private user: User;
   @Output()
   private saveEvent = new EventEmitter<SaveEvent>();
+  private isEditPicture = false;
 
   onSubmit() {
     this.saveEvent.emit({user: this.user, doSave: true});
@@ -20,6 +21,11 @@ export class UserEditComponent {
 
   onCancel() {
     this.saveEvent.emit({user: this.user, doSave: false});
+  }
+
+  onSelectImage(path: string) {
+    this.user.profilePicture = path;
+    this.isEditPicture = false;
   }
 
 }

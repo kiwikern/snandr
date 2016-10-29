@@ -7,13 +7,18 @@ import {UserRoutingModule} from './user-routing.module';
 import {MaterialModule} from '@angular/material';
 import {UserComponent} from './user.component';
 import {FormsModule} from '@angular/forms';
+import {ProfileIconModule} from '../icon/profileicon.module';
+import {SimpleNotificationsModule} from 'angular2-notifications';
+import { FriendlistComponent } from './friendlist/friendlist.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     MaterialModule,
-    UserRoutingModule
+    ProfileIconModule,
+    UserRoutingModule,
+    SimpleNotificationsModule
   ],
   providers: [
     UserService
@@ -21,7 +26,8 @@ import {FormsModule} from '@angular/forms';
   declarations: [
     UserDisplayComponent,
     UserEditComponent,
-    UserComponent
+    UserComponent,
+    FriendlistComponent
   ]
 })
 export class UserModule {

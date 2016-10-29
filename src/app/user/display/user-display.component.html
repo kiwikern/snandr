@@ -3,7 +3,7 @@
     <md-card-title-group>
       <md-card-title>{{ user.firstName }} {{ user.lastName }}</md-card-title>
       <md-card-subtitle>{{ user.username }}</md-card-subtitle>
-      <img md-card-avatar [src]="user.profilePicture">
+      <img class="userImage" [src]="user.profilePicture">
     </md-card-title-group>
     <md-list>
       <md-list-item>
@@ -23,7 +23,7 @@
 
     <md-list>
       <md-list-item *ngFor="let friend of user.friends">
-        <img md-list-avatar src="assets/icons/persons/superman.svg">
+        <img md-list-avatar src="http://localhost:3000/icons/persons/superman.svg">
         <span md-line>Markus</span>
       </md-list-item>
     </md-list>

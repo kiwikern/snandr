@@ -1,6 +1,6 @@
 <md-sidenav-layout fullscreen>
   <md-sidenav #sidenav mode="over">
-    <h2>PIZZA UND ROMME</h2>
+    <h2>snandr</h2>
     <br>
     <a md-button (click)="sidenav.close()" routerLink="matches" routerLinkActive="active">Runde</a>
     <br>
@@ -11,12 +11,13 @@
     <button md-icon-button (click)="sidenav.toggle()">
       <md-icon>menu</md-icon>
     </button>
-    <span>Pizza & Rommé</span>
+    <span>snandr</span>
   </md-toolbar>
 
   <div class="container">
     <div class="content">
       <router-outlet></router-outlet>
+      <simple-notifications timeOut="5000"></simple-notifications>
     </div>
   </div>
 </md-sidenav-layout>

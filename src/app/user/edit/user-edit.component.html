@@ -1,7 +1,10 @@
 <form (ngSubmit)="onSubmit()">
   <md-card>
-    <md-card-title>Person bearbeiten</md-card-title>
-    <md-card-content>
+    <md-card-title-group>
+      <md-card-title>Bearbeiten</md-card-title>
+      <img md-card-sm-image [src]="user.profilePicture" name="profilePicture" (click)="isEditPicture=!isEditPicture">
+    </md-card-title-group>
+    <md-card-content style="text-align: center">
       <md-input placeholder="Vorname" [(ngModel)]="user.firstName" name="firstName"></md-input>
       <md-input placeholder="Nachname" [(ngModel)]="user.lastName" name="lastName"></md-input>
       <br>
@@ -9,13 +12,14 @@
       <md-input placeholder="E-Mail" [(ngModel)]="user.email" name="email"></md-input>
       <br>
       <md-input placeholder="Stadt" [(ngModel)]="user.city" name="city"></md-input>
-      <md-input placeholder="Profilbild" [(ngModel)]="user.profilePicture" name="profilePicture"></md-input>
     </md-card-content>
   </md-card>
-  <button md-fab type="submit" class="md-primary">
+  <button md-fab type="submit" class="md-primary btn-floating">
     <md-icon>save</md-icon>
   </button>
-  <button md-mini-fab (click)="onCancel()" type="reset">
+  <button md-mini-fab class="mini-btn-floating" (click)="onCancel()" type="reset">
     <md-icon>cancel</md-icon>
   </button>
 </form>
+
+<snandr-icon *ngIf="isEditPicture" (selectedEvent)="onSelectImage($event)"></snandr-icon>

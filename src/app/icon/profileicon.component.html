@@ -1,0 +1,24 @@
+<!--<perfect-scrollbar>-->
+  <md-card>
+    <md-card-title-group>
+      <md-card-title>Wähle deines neues Profilbild</md-card-title>
+    </md-card-title-group>
+    <md-radio-group>
+      <md-radio-button #animals value="animals" checked="true">Tiere</md-radio-button>
+      <md-radio-button #persons value="persons">Personen</md-radio-button>
+    </md-radio-group>
+
+    <md-grid-list cols="4">
+      <div *ngIf="animals.checked">
+        <md-grid-tile *ngFor="let animal of animalIcons" (click)="onSelect(basePath + 'animals/' + animal)">
+          <img class="icon" [src]="basePath + 'animals/' + animal">
+        </md-grid-tile>
+      </div>
+      <div *ngIf="persons.checked">
+        <md-grid-tile *ngFor="let person of personIcons">
+          <img class="icon" [src]="basePath + 'persons/' +  person">
+        </md-grid-tile>
+      </div>
+    </md-grid-list>
+  </md-card>
+<!--</perfect-scrollbar>-->

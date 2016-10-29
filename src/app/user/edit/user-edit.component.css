@@ -1,0 +1,16 @@
+.userImage {
+  width: 75px;
+  height: 75px;
+}
+
+.btn-floating {
+  position: fixed;
+  right: 25px;
+  bottom: 40px;
+}
+
+.mini-btn-floating {
+  position: fixed;
+  right: 34px;
+  bottom: 103px;
+}

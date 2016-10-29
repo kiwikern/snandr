@@ -8,10 +8,11 @@ import { MatchModule } from './match/match.module';
 
 import { AppComponent } from './app.component';
 import {UserModule} from './user/user.module';
+import {SimpleNotificationsModule} from 'angular2-notifications';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +21,8 @@ import {UserModule} from './user/user.module';
     MaterialModule.forRoot(),
     AppRoutingModule,
     MatchModule,
-    UserModule
+    UserModule,
+    SimpleNotificationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
