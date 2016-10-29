@@ -1,0 +1,17 @@
+// to use it add following line to styles in angular-cli.json
+//        "snandr-dark-theme.sass",
+
+@import '~@angular/material/core/theming/all-theme';
+@include md-core();
+
+$snandr-dark-primary: md-palette($md-pink, A100);
+$snandr-dark-accent:  md-palette($md-cyan, A400, A700);
+
+$snandr-dark-warn:    md-palette($md-pink, A200);
+
+$snandr-dark-theme: md-dark-theme($snandr-dark-primary, $snandr-dark-accent, $snandr-dark-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($snandr-dark-theme);

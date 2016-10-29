@@ -9,9 +9,10 @@
       <md-input placeholder="E-Mail" [(ngModel)]="user.email" name="email"></md-input>
       <br>
       <md-input placeholder="Stadt" [(ngModel)]="user.city" name="city"></md-input>
+      <md-input placeholder="Profilbild" [(ngModel)]="user.profilePicture" name="profilePicture"></md-input>
     </md-card-content>
   </md-card>
-  <button md-fab type="submit">
+  <button md-fab type="submit" class="md-primary">
     <md-icon>save</md-icon>
   </button>
   <button md-mini-fab (click)="onCancel()" type="reset">

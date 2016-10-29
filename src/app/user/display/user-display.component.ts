@@ -12,4 +12,11 @@ export class UserDisplayComponent {
   @Input()
   user: User;
 
+  getFriendsCount(): number {
+    if (this.user.friends) {
+      return this.user.friends.length;
+    } else {
+      return 0;
+    }
+  }
 }
