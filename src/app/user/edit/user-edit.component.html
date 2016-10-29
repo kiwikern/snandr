@@ -2,16 +2,16 @@
   <md-card>
     <md-card-title-group>
       <md-card-title>Bearbeiten</md-card-title>
-      <img md-card-sm-image [src]="user.profilePicture" name="profilePicture" (click)="isEditPicture=!isEditPicture">
+      <img md-card-sm-image [src]="_user.profilePicture" name="profilePicture" (click)="isEditPicture=!isEditPicture">
     </md-card-title-group>
     <md-card-content style="text-align: center">
-      <md-input placeholder="Vorname" [(ngModel)]="user.firstName" name="firstName"></md-input>
-      <md-input placeholder="Nachname" [(ngModel)]="user.lastName" name="lastName"></md-input>
+      <md-input placeholder="Vorname" [(ngModel)]="_user.firstName" name="firstName"></md-input>
+      <md-input placeholder="Nachname" [(ngModel)]="_user.lastName" name="lastName"></md-input>
       <br>
-      <md-input placeholder="Username" [(ngModel)]="user.username" name="username"></md-input>
-      <md-input placeholder="E-Mail" [(ngModel)]="user.email" name="email"></md-input>
+      <md-input placeholder="Username" [(ngModel)]="_user.username" name="username"></md-input>
+      <md-input placeholder="E-Mail" [(ngModel)]="_user.email" name="email"></md-input>
       <br>
-      <md-input placeholder="Stadt" [(ngModel)]="user.city" name="city"></md-input>
+      <md-input placeholder="Stadt" [(ngModel)]="_user.city" name="city"></md-input>
     </md-card-content>
   </md-card>
   <button md-fab type="submit" class="md-primary btn-floating">

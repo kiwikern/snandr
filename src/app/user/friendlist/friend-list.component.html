@@ -1,0 +1,10 @@
+<md-list>
+  <md-list-item>
+    <md-icon md-list-icon>people</md-icon>
+    <span md-line>{{ users?.length }} Freunde</span>
+  </md-list-item>
+  <md-list-item *ngFor="let friend of users">
+    <img md-list-avatar [src]="friend.profilePicture">
+    <span md-line>{{ friend.firstName }} {{ friend.lastName }}</span>
+  </md-list-item>
+</md-list>

@@ -9,7 +9,7 @@ import {UserComponent} from './user.component';
 import {FormsModule} from '@angular/forms';
 import {ProfileIconModule} from '../icon/profileicon.module';
 import {SimpleNotificationsModule} from 'angular2-notifications';
-import { FriendlistComponent } from './friendlist/friendlist.component';
+import { FriendListComponent } from './friendlist/friend-list.component';
 
 @NgModule({
   imports: [
@@ -27,7 +27,7 @@ import { FriendlistComponent } from './friendlist/friendlist.component';
     UserDisplayComponent,
     UserEditComponent,
     UserComponent,
-    FriendlistComponent
+    FriendListComponent
   ]
 })
 export class UserModule {

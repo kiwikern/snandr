@@ -1,4 +1,4 @@
-import {Component, EventEmitter} from '@angular/core';
+import {Component, EventEmitter, OnChanges} from '@angular/core';
 import {User} from '../user';
 import {Input, Output} from '@angular/core/src/metadata/directives';
 
@@ -7,24 +7,32 @@ import {Input, Output} from '@angular/core/src/metadata/directives';
   templateUrl: './user-edit.component.html',
   styleUrls: ['./user-edit.component.css']
 })
-export class UserEditComponent {
+export class UserEditComponent implements OnChanges {
 
   @Input()
-  private user: User;
+  user: User;
   @Output()
   private saveEvent = new EventEmitter<SaveEvent>();
+  private _user: User;
   private isEditPicture = false;
 
+  ngOnChanges(changes: any) {
+    let userChanges = changes.user.currentValue;
+    if (userChanges) {
+      this._user = Object.assign({}, userChanges);
+    }
+  }
+
   onSubmit() {
-    this.saveEvent.emit({user: this.user, doSave: true});
+    this.saveEvent.emit({user: this._user, doSave: true});
   }
 
   onCancel() {
-    this.saveEvent.emit({user: this.user, doSave: false});
+    this.saveEvent.emit({user: this._user, doSave: false});
   }
 
   onSelectImage(path: string) {
-    this.user.profilePicture = path;
+    this._user.profilePicture = path;
     this.isEditPicture = false;
   }
 

@@ -11,7 +11,7 @@ import {NotificationsService} from 'angular2-notifications';
   styleUrls: ['user.component.css']
 })
 export class UserComponent implements OnInit {
-  user: User = User.getNullUser();
+  user: User;
   userId: string;
   isEditMode: boolean = false;
 
@@ -37,18 +37,23 @@ export class UserComponent implements OnInit {
   onSave(event: SaveEvent) {
     this.isEditMode = false;
     if (event.doSave) {
-      this.saveUser();
-      this.notificationService.success('Gespeichert', 'Benutzer wurde erfolgreich gespeichert.');
+      this.saveUser(event.user);
+      this.notificationService.success('Gespeichert', 'Benutzer wurde erfolgreich gespeichert.', {timeOut: 3000});
+    } else {
+      this.notificationService.info('Änderungen verworfen', 'Rückgängig machen (todo).', {timeOut: 3000});
     }
   }
 
   getUser() {
     this.userService.getUser(this.userId)
-      .then(user => this.user = user);
+      .subscribe(
+        user => this.user = user,
+        error => this.notificationService.error('Ups!', 'Fehler: ' + error.toString()));
   }
 
-  saveUser() {
-    this.userService.saveUser(this.user);
+  saveUser(user: User) {
+    this.userService.saveUser(user)
+      .subscribe(() => this.user = user);
     // todo: spinner -> confirmation/error
   }
 

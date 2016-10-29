@@ -1,9 +1,8 @@
 import {Injectable} from '@angular/core';
-import {Http} from '@angular/http';
-
-import 'rxjs/add/operator/toPromise';
+import {Http, Response} from '@angular/http';
 
 import {User} from './user';
+import {Observable} from 'rxjs';
 
 @Injectable()
 export class UserService {
@@ -15,31 +14,36 @@ export class UserService {
   constructor(private http: Http) {
   }
 
-  getUsers(): Promise<User[]> {
+  getUsers(): Observable<User[]> {
     return this.http.get(this.url)
-      .toPromise()
-      .then(response => response.json().data as User[])
+      .map(response => response.json() as User[])
       .catch(this.handleError);
   }
 
-  getUser(id: string): Promise<User> {
+  getUser(id: string): Observable<User> {
     const idUrl = `${this.url}/${id}`;
     return this.http.get(idUrl)
-      .toPromise()
-      .then(respone => respone.json() as User)
+      .map(respone => respone.json() as User)
       .catch(this.handleError);
   }
 
-  saveUser(user: User): Promise<User> {
+  saveUser(user: User): Observable<User> {
     const idUrl = `${this.url}/${user._id}`;
     return this.http.put(idUrl, user)
-      .toPromise()
-      .then(respone => respone.json() as User)
+      .map(respone => respone.json() as User)
       .catch(this.handleError);
   }
 
-  private handleError(error: any): Promise<any> {
-    console.error('An error occurred', error);
-    return Promise.reject(error.message || error);
+  private handleError(error: Response | any): Observable<any> {
+    let errMsg: string;
+    if (error instanceof Response) {
+      const body = error.json() || '';
+      const err = body.error || JSON.stringify(body);
+      errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
+    } else {
+      errMsg = error.message ? error.message : error.toString();
+    }
+    console.error(errMsg);
+    return Observable.throw(errMsg);
   }
 }

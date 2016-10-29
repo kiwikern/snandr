@@ -10,7 +10,7 @@ import {Output} from '@angular/core/src/metadata/directives';
 export class ProfileIconComponent {
 
   @Output()
-  selectedEvent: EventEmitter<string> = new EventEmitter();
+  selectedEvent: EventEmitter<string> = new EventEmitter<string>();
   animalIcons: string[] = [];
   personIcons: string[] = [];
   basePath: string = 'http://localhost:3000/icons/';
