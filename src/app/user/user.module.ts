@@ -10,6 +10,7 @@ import {FormsModule} from '@angular/forms';
 import {ProfileIconModule} from '../icon/profileicon.module';
 import {SimpleNotificationsModule} from 'angular2-notifications';
 import { FriendListComponent } from './friendlist/friend-list.component';
+import {FabModule} from '../fab/fab.module';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { FriendListComponent } from './friendlist/friend-list.component';
     MaterialModule,
     ProfileIconModule,
     UserRoutingModule,
-    SimpleNotificationsModule
+    SimpleNotificationsModule,
+    FabModule
   ],
   providers: [
     UserService

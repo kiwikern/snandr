@@ -1,0 +1,7 @@
+<button md-fab [type]="configuration.mainButton?.type" (click)="mainAction.emit()" class="md-primary btn-floating">
+  <md-icon>{{ configuration.mainButton.icon }}</md-icon>
+</button>
+<button md-mini-fab *ngIf="configuration.secondaryButton && showSecondaryActions" [@showSecondary]="'in'"
+        [type]="configuration.secondaryButton?.type" (click)="secondaryAction.emit()" class="mini-btn-floating">
+  <md-icon>{{ configuration.secondaryButton.icon }}</md-icon>
+</button>

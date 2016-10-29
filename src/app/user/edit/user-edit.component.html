@@ -1,4 +1,4 @@
-<form (ngSubmit)="onSubmit()">
+<form (ngSubmit)="onSubmit()" #form="ngForm">
   <md-card>
     <md-card-title-group>
       <md-card-title>Bearbeiten</md-card-title>
@@ -14,12 +14,7 @@
       <md-input placeholder="Stadt" [(ngModel)]="_user.city" name="city"></md-input>
     </md-card-content>
   </md-card>
-  <button md-fab type="submit" class="md-primary btn-floating">
-    <md-icon>save</md-icon>
-  </button>
-  <button md-mini-fab class="mini-btn-floating" (click)="onCancel()" type="reset">
-    <md-icon>cancel</md-icon>
-  </button>
+  <snandr-fab [configuration]="fabConfig" (secondaryAction)="onCancel()" [showSecondaryActions]="form.dirty"></snandr-fab>
 </form>
 
 <snandr-icon *ngIf="isEditPicture" (selectedEvent)="onSelectImage($event)"></snandr-icon>

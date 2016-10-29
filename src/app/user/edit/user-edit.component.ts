@@ -1,6 +1,7 @@
 import {Component, EventEmitter, OnChanges} from '@angular/core';
 import {User} from '../user';
 import {Input, Output} from '@angular/core/src/metadata/directives';
+import {FabButtonConfiguration} from '../../fab/fab.component';
 
 @Component({
   selector: 'snandr-user-edit',
@@ -12,9 +13,19 @@ export class UserEditComponent implements OnChanges {
   @Input()
   user: User;
   @Output()
-  private saveEvent = new EventEmitter<SaveEvent>();
-  private _user: User;
-  private isEditPicture = false;
+  saveEvent = new EventEmitter<SaveEvent>();
+  _user: User = User.getNullUser();
+  isEditPicture = false;
+  fabConfig: FabButtonConfiguration = {
+    mainButton: {
+      icon: 'done',
+      type: 'submit'
+    },
+    secondaryButton: {
+      icon: 'cancel',
+      type: 'button'
+    }
+  };
 
   ngOnChanges(changes: any) {
     let userChanges = changes.user.currentValue;
@@ -35,6 +46,7 @@ export class UserEditComponent implements OnChanges {
     this._user.profilePicture = path;
     this.isEditPicture = false;
   }
+
 
 }
 

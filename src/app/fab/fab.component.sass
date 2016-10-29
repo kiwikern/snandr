@@ -1,0 +1,15 @@
+@mixin floating
+  position: fixed
+
+.btn-floating
+  @include floating
+  bottom: 40px
+  right: 25px
+  z-index: 2
+
+.mini-btn-floating
+  @include floating
+  position: fixed
+  right: 34px
+  bottom: 70px
+  opacity: 0
