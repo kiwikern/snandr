@@ -11,6 +11,7 @@ import {ProfileIconModule} from '../icon/profileicon.module';
 import {SimpleNotificationsModule} from 'angular2-notifications';
 import { FriendListComponent } from './friendlist/friend-list.component';
 import {FabModule} from '../fab/fab.module';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   imports: [
@@ -29,7 +30,8 @@ import {FabModule} from '../fab/fab.module';
     UserDisplayComponent,
     UserEditComponent,
     UserComponent,
-    FriendListComponent
+    FriendListComponent,
+    LoginComponent
   ]
 })
 export class UserModule {

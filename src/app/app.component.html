@@ -2,10 +2,11 @@
   <md-sidenav #sidenav mode="over">
     <h2>snandr</h2>
     <br>
-    <a md-button (click)="sidenav.close()" routerLink="matches" routerLinkActive="active">Runde</a>
+    <button md-button (click)="sidenav.close()" routerLink="matches" routerLinkActive="active">Runde</button>
     <br>
-    <a md-button (click)="sidenav.close()" routerLink="users/580d394db1b2fb33281966f4">Registrieren</a>
+    <button md-button (click)="sidenav.close()" routerLink="users/580d394db1b2fb33281966f4">Profil</button>
     <br>
+    <button md-button (click)="sidenav.close()" routerLink="login">Login</button>
   </md-sidenav>
   <md-toolbar>
     <button md-icon-button (click)="sidenav.toggle()">

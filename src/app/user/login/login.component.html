@@ -1,0 +1,12 @@
+<md-card style="text-align: center">
+  <md-card-title>snandr</md-card-title>
+  <md-divider></md-divider>
+  <form (ngSubmit)="doLogin()">
+    <md-input type="text" placeholder="Username" [(ngModel)]="username" name="username"></md-input>
+    <md-input type="password" placeholder="Passwort" [(ngModel)]="password" name="password"></md-input>
+    <md-card-actions>
+      <button md-raised-button type="submit">Log in</button>
+    </md-card-actions>
+    <snandr-fab [configuration]="fabConfig"></snandr-fab>
+  </form>
+</md-card>
